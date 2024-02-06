@@ -212,7 +212,14 @@ span {
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
+    transition: .5s ease;
 }
+
+.team-container .team-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
 
 .team-box img {
     width: 50%;
