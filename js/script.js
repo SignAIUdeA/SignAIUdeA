@@ -1,3 +1,13 @@
+/*=================== toggle icon navbar ===================*/
+let menuIcon = document.getElementById('#menu-icon');
+let navbar = document.getElementById('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
+
+
 /*=================== scroll sections active link ===================*/
 let sections = document.querySelectorAll('section');
 let navList = document.getElementById('header nav a');
@@ -17,9 +27,15 @@ window.onscroll = () => {
             });
         };
     });
-};
 
 /*=================== sticky navbar ===================*/
 let header = document.querySelector('header');
 
-header.classList.toggle('sticky', window.scrollY > 0);
+header.classList.toggle('sticky', window.scrollY > 100);
+
+/*=================== remove toggle icon and navbar when click navbar link (scroll)  ===================*/
+
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+
+};
